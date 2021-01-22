@@ -1,9 +1,7 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import HomeScreen from './src/components/HomeScreeen';
+import MainRouter from './src/components/MainRouter';
 
 export default function App() {
-  return (
-    <HomeScreen />
-  );
+  return <MainRouter />;
 }
