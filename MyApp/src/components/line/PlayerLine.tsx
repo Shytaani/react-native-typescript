@@ -43,7 +43,8 @@ export default function Line(props: { item: Player }) {
             <Text>WEIGHT : {item.weight}</Text>
             <Text>JERSEY NO : {item.jerseyNo}</Text>
             <Text>POSITION : {item.position}</Text>
-            <Text>COLLEGE/COUNTRY : {item.affiliation}</Text>
+            <Text>COLLEGE : {item.college}</Text>
+            <Text>COUNTRY : {item.country}</Text>
             <Text>BIRTH DATE : {item.birthDate}</Text>
             <Text>YEARS PRO : {item.yearsPro}</Text>
           </View>

@@ -27,12 +27,13 @@ export default class RosterAPI {
         id: p.personId,
         name: `${p.firstName} ${p.lastName}`,
         sortLetter: p.sortLetter,
-        height: `${p.heightFt}.${p.heightIn}`,
-        weight: p.weightLbs,
+        height: `${p.heightFt}.${p.heightIn}ft`,
+        weight: `${p.weightLbs}lbs`,
         jerseyNo: p.jerseyNumber,
         position: p.positionShort,
-        affiliation: p.affiliation,
-        birthDate: p.birthDate,
+        college: p.affiliation.split('/')[0],
+        country: p.affiliation.split('/')[1],
+        birthDate: `${p.birthDate.slice(0, 4)}/${p.birthDate.slice(4, 6)}/${p.birthDate.slice(6)}`,
         yearsPro: p.yearsPro,
       }));
       const coaches: Coach[] = CamelcaseKeys(roster.coaches.coach).map((c: any, i: number) => ({

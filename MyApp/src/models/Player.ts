@@ -6,7 +6,8 @@ export default interface Player {
   weight: string;
   jerseyNo: string;
   position: string;
-  affiliation: string;
+  college: string;
+  country: string;
   birthDate: string;
   yearsPro: string;
 }
