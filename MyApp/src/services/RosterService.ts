@@ -6,7 +6,7 @@ import Roster from '../models/Roster';
 
 type SortFunc = (a: Player | Coach, b: Player | Coach) => number;
 
-const defaultSortFunc = (a: Player | Coach, b: Player | Coach) => {
+const defaultSortFunc: SortFunc = (a: Player | Coach, b: Player | Coach) => {
   if (a.sortLetter < b.sortLetter) {
     return -1;
   }
