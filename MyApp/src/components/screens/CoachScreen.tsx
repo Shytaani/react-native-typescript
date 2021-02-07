@@ -1,10 +1,9 @@
 import { DrawerActions, useNavigation } from '@react-navigation/native';
 import React, { useEffect, useState } from 'react';
-import { FlatList, StyleSheet, Text } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { FlatList, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import Coach from '../../models/Coach';
 import RosterAPI from '../../services/RosterService';
-import Line from '../common/Line';
+import CoachLine from '../line/CoachLine';
 
 const style = StyleSheet.create({
   header: {
@@ -29,7 +28,7 @@ export default function CoachScreen() {
   return (
     <FlatList
       data={coaches}
-      renderItem={({ item: coach }) => <Line item={coach} />}
+      renderItem={({ item: coach }) => <CoachLine item={coach} />}
       keyExtractor={coach => coach.id.toString()}
       ListHeaderComponent={() => (
         <TouchableOpacity onPress={() => dispatch(DrawerActions.openDrawer())}>
