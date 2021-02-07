@@ -1,10 +1,9 @@
 import { DrawerActions, useNavigation } from '@react-navigation/native';
 import React, { useEffect, useState } from 'react';
-import { FlatList, StyleSheet, Text } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { FlatList, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import Player from '../../models/Player';
 import RosterAPI from '../../services/RosterService';
-import Line from '../common/Line';
+import PlayerLine from '../line/PlayerLine';
 
 const style = StyleSheet.create({
   header: {
@@ -29,7 +28,7 @@ export default function PlayerScreen() {
   return (
     <FlatList
       data={players}
-      renderItem={({ item: player }) => <Line item={player} />}
+      renderItem={({ item: player }) => <PlayerLine item={player} />}
       keyExtractor={player => player.id.toString()}
       ListHeaderComponent={() => (
         <TouchableOpacity onPress={() => dispatch(DrawerActions.openDrawer())}>
