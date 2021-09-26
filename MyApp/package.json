@@ -6,6 +6,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
+    "clean": "react-native clean-project",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
@@ -43,6 +44,7 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "jest": "^25.1.0",
     "metro-react-native-babel-preset": "^0.59.0",
+    "react-native-clean-project": "^3.6.7",
     "react-test-renderer": "16.13.1",
     "typescript": "^3.8.3"
   },
